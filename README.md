@@ -21,22 +21,22 @@ $router->addCustomAction('mail','App\\CustomActions\\SQLAction');
 
 $router->run();
 ```
-Next you have to modify .env file with your mail server data:
+Next you have to modify .env file with your sql connection data:
 ``` .env
-SQL_TYPE=
-SQL_HOST=
-SQL_USER=
-SQL_PASS=
-SQL_DTBS=
-SQL_PORT=
-SQL_CHAR=
+SQL_TYPE=mysql
+SQL_HOST=localhost
+SQL_USER=root
+SQL_PASS=******
+SQL_DTBS=test
+SQL_PORT=3306
+SQL_CHAR=UTF8
 ```
 
 Now you can use the new action in your routes file.
 
 ``` json
 {
-    "mail":{
+    "sql":{
         "query":{
             "execute":[
                 {
@@ -70,7 +70,7 @@ Like you can see in the example, the action "PhpMailer" have the next parameters
  - values['optional']: This is the place to add the values to the query.
 
 ## ENV variables
-You can have more than one mail server setted for one project using envFlag. The envFlag adds the value of the endFlag in the middle of your envFlag key. For example:
+You can have more than one SQL connection setted for one project using envFlag. The envFlag adds the value of the endFlag in the middle of your envFlag key. For example:
 ``` json
 {
     "sql":{
@@ -101,19 +101,19 @@ You can have more than one mail server setted for one project using envFlag. The
 ```
 For the last example you have to complete other env variables:
 ``` .env
-SQL_CALIFORNIA_TYPE=
-SQL_CALIFORNIA_HOST=
-SQL_CALIFORNIA_USER=
-SQL_CALIFORNIA_PASS=
-SQL_CALIFORNIA_DTBS=
-SQL_CALIFORNIA_PORT=
-SQL_CALIFORNIA_CHAR=
+SQL_CALIFORNIA_TYPE=mysql
+SQL_CALIFORNIA_HOST=localhost
+SQL_CALIFORNIA_USER=root
+SQL_CALIFORNIA_PASS=*******
+SQL_CALIFORNIA_DTBS=test
+SQL_CALIFORNIA_PORT=3306
+SQL_CALIFORNIA_CHAR=UTF8
 
-SQL_TEXAS__TYPE=
-SQL_TEXAS__HOST=
-SQL_TEXAS__USER=
-SQL_TEXAS__PASS=
-SQL_TEXAS__DTBS=
-SQL_TEXAS__PORT=
-SQL_TEXAS__CHAR=
+SQL_TEXAS__TYPE=mysql
+SQL_TEXAS__HOST=localhost
+SQL_TEXAS__USER=root
+SQL_TEXAS__PASS=******
+SQL_TEXAS__DTBS=test
+SQL_TEXAS__PORT=3306
+SQL_TEXAS__CHAR=UTF8
 ```
