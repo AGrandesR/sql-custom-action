@@ -1,6 +1,6 @@
 <?php
 
-namespace App\CustomActions;
+namespace Agrandesr\CustomActions;
 
 use Agrandesr\actions\ActionBuilder;
 use PDO;
