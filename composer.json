@@ -1,0 +1,18 @@
+{
+    "name": "agrandesr/sql-custom-action",
+    "description": "This Custom Action is a implementation for the Agile Router library to make easy and quick SQL calls.",
+    "type": "library",
+    "license": "MIT",
+    "autoload": {
+        "psr-4": {
+            "Agrandesr\\CustomActions\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "A.Grandes.R",
+            "email": "agrandesr@gmail.com"
+        }
+    ],
+    "require": {}
+}
